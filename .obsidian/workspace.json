@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "be119fb9f5fecb9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "0c159230667a48ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c3eae070e0be357",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9271bea6704134b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "e4a2e5c88c067095",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70a493fdd4b6c2b5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "48210453363c8139",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f96466a729897b2d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a2cad816b1c61d66",
+    "type": "split",
+    "children": [
+      {
+        "id": "f39ca16e4e1e1965",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b11df6563e078ecf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fa89d60999e28391",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8cda5d9bc3507a7c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4e09271c2631477f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "7c3eae070e0be357",
+  "lastOpenFiles": [
+    "Notes/Element-summary-description.md",
+    "README.md",
+    "Notes/Bootstrap-static-Columns-description.md",
+    "Element-summary-description.md",
+    "Notes",
+    "New folder",
+    "Bootstrap-static-Columns-description.md",
+    "Event-columns-Description.md"
+  ]
+}
