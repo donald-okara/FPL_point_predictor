@@ -1,4 +1,4 @@
-code,draw,form,teams_id,loss,team_name,played,points,position,team_short_name,strength,team_division,unavailable,win,strength_overall_home,strength_overall_away,strength_attack_home,strength_attack_away,strength_defence_home,strength_defence_away,pulse_id,event_id,fixture_id,fixture_difficulty
+code,draw,form,team_id,loss,team_name,played,points,position,team_short_name,strength,team_division,unavailable,win,strength_overall_home,strength_overall_away,strength_attack_home,strength_attack_away,strength_defence_home,strength_defence_away,pulse_id,event_id,fixture_id,fixture_difficulty
 3,0,,1,0,Arsenal,0,0,0,ARS,4,,False,0,1230,1285,1250,1250,1210,1320,1,1,2.0,2.0
 7,0,,2,0,Aston Villa,0,0,0,AVL,3,,False,0,1115,1175,1130,1190,1100,1160,2,1,6.0,4.0
 91,0,,3,0,Bournemouth,0,0,0,BOU,3,,False,0,1060,1095,1050,1100,1060,1090,127,1,3.0,2.0
