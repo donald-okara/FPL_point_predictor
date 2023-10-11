@@ -139,26 +139,26 @@ code,team_id,team_name,team_short_name,unavailable,pulse_id,event_id,fixture_id,
 6,18,Spurs,TOT,False,21,7,68.0,4.0,11.0,1.0,2.0,True,True
 21,19,West Ham,WHU,False,25,7,69.0,2.0,17.0,0.0,2.0,True,True
 39,20,Wolves,WOL,False,38,7,70.0,5.0,13.0,1.0,2.0,True,True
-3,1,Arsenal,ARS,False,1,8,71.0,5.0,13.0,,,False,True
-7,2,Aston Villa,AVL,False,2,8,80.0,2.0,20.0,,,False,False
+3,1,Arsenal,ARS,False,1,8,71.0,5.0,13.0,0.0,1.0,True,True
+7,2,Aston Villa,AVL,False,2,8,80.0,2.0,20.0,1.0,1.0,True,False
 91,3,Bournemouth,BOU,False,127,8,75.0,2.0,9.0,3.0,0.0,True,False
 94,4,Brentford,BRE,False,130,8,78.0,4.0,14.0,2.0,1.0,True,False
-36,5,Brighton,BHA,False,131,8,72.0,4.0,11.0,,,False,True
+36,5,Brighton,BHA,False,131,8,72.0,4.0,11.0,2.0,2.0,True,True
 90,6,Burnley,BUR,False,43,8,73.0,3.0,7.0,4.0,1.0,True,True
 8,7,Chelsea,CHE,False,4,8,73.0,2.0,6.0,1.0,4.0,True,False
 31,8,Crystal Palace,CRY,False,6,8,74.0,2.0,16.0,0.0,0.0,True,True
 11,9,Everton,EVE,False,7,8,75.0,2.0,3.0,0.0,3.0,True,True
 54,10,Fulham,FUL,False,34,8,76.0,2.0,17.0,1.0,3.0,True,True
-14,11,Liverpool,LIV,False,10,8,72.0,3.0,5.0,,,False,False
+14,11,Liverpool,LIV,False,10,8,72.0,3.0,5.0,2.0,2.0,True,False
 102,12,Luton,LUT,False,163,8,77.0,3.0,18.0,1.0,0.0,True,True
-43,13,Man City,MCI,False,11,8,71.0,4.0,1.0,,,False,False
+43,13,Man City,MCI,False,11,8,71.0,4.0,1.0,1.0,0.0,True,False
 1,14,Man Utd,MUN,False,12,8,78.0,3.0,4.0,1.0,2.0,True,True
-4,15,Newcastle,NEW,False,23,8,79.0,3.0,19.0,,,False,False
+4,15,Newcastle,NEW,False,23,8,79.0,3.0,19.0,2.0,2.0,True,False
 17,16,Nott'm Forest,NFO,False,15,8,74.0,2.0,8.0,0.0,0.0,True,False
 49,17,Sheffield Utd,SHU,False,18,8,76.0,2.0,10.0,3.0,1.0,True,False
 6,18,Spurs,TOT,False,21,8,77.0,2.0,12.0,0.0,1.0,True,False
-21,19,West Ham,WHU,False,25,8,79.0,4.0,15.0,,,False,True
-39,20,Wolves,WOL,False,38,8,80.0,3.0,2.0,,,False,True
+21,19,West Ham,WHU,False,25,8,79.0,4.0,15.0,2.0,2.0,True,True
+39,20,Wolves,WOL,False,38,8,80.0,3.0,2.0,1.0,1.0,True,True
 3,1,Arsenal,ARS,False,1,9,84.0,3.0,7.0,,,False,False
 7,2,Aston Villa,AVL,False,2,9,81.0,2.0,19.0,,,False,True
 91,3,Bournemouth,BOU,False,127,9,82.0,2.0,20.0,,,False,True
