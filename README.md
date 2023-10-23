@@ -1,136 +1,72 @@
-
 # Fantasy Premier League Data Analysis
 
-## 1. Teams Filtering
-You can find all the relevant APIs and descriptions of each dataframe in this project.
+## Overview
+The Fantasy Premier League (FPL) Data Analysis project is an extensive exploration of FPL data to empower data scientists and enthusiasts in gaining insights into the performance of Premier League players and teams within the context of the FPL fantasy football game. This README offers an in-depth guide to the project, explaining how to access, process, and analyze FPL data to make informed decisions about FPL team selection and strategy.
 
-- **Link to APIs**: [Fantasy Premier League APIs](https://www.game-change.co.uk/2023/02/10/a-complete-guide-to-the-fantasy-premier-league-fpl-api/)
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Data Sources](#data-sources)
+3. [Getting Started](#getting-started)
+4. [Data Preparation](#data-preparation)
+5. [Data Analysis](#data-analysis)
+7. [Contribution](#contribution)
+8. [License](#license)
 
-### 1.1. Importing Libraries
-Before you start with the data analysis, you need to import the necessary libraries. Ensure you've installed these libraries before running the code.
+## Introduction
+Fantasy Premier League (FPL) is a popular online fantasy football game where participants create virtual teams comprising real Premier League players. These virtual teams earn points based on the real players' performances in actual Premier League matches. This project is designed to provide a comprehensive framework for data analysis of FPL data, aiding FPL enthusiasts in making informed decisions regarding team selection and strategy.
 
-```python
-import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import requests
+## Data Sources
+To perform in-depth FPL data analysis, we rely on the official FPL API as the primary data source. The following are key data sources used in this project:
 
-print("Libraries imported successfully...")
+- [Fantasy Premier League API](https://fantasy.premierleague.com/api/bootstrap-static/): This API serves as the principal data source, offering a wide array of data, including player information, team details, fixtures, and more.
+
+## Getting Started
+Before diving into FPL data analysis, it is imperative to ensure that you have the necessary tools and libraries installed. To initiate the project, you will need Python and the following libraries:
+
+- pandas
+- numpy
+- seaborn
+- matplotlib
+- requests
+
+You can readily install these libraries using pip. Here's an example of how to install them:
+
+```shell
+pip install pandas numpy seaborn matplotlib requests
 ```
 
-### 1.2. Add Fixture Data to the Teams Data
+## Data Preparation
+Data preparation is a critical step before engaging in data analysis. This involves fetching relevant data from the FPL API, cleansing it, and structuring it into DataFrames. Here are the detailed steps for data preparation:
 
-#### 1.2.1. Teams DataFrame (Teams DF)
-The following steps explain how to get fixture data for teams:
-
-- Import data from the last season's Fantasy Premier League API.
-- Convert the data to a DataFrame.
+### 1. Teams Filtering
+- Retrieve data from the FPL API and convert it into structured DataFrames.
 - Append event IDs to the teams' data for all 38 game weeks.
+- Merge fixture data with teams' data to form a comprehensive dataset.
 
-```python
-url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
-r = requests.get(url)
-json = r.json()
+### 2. Player Filtering
+- Retrieve player data from the FPL API.
+- Merge player data with fixture data, creating a comprehensive dataset that encompasses player information and performance.
 
-elements_df = pd.DataFrame(json['elements'])
-elements_types_df = pd.DataFrame(json['element_types'])
-teams_df = pd.DataFrame(json['teams'])
+Data preparation ensures that the data is in a suitable format for analysis and provides a foundation for subsequent analytical steps.
 
-# Function to append event IDs
-def append_event_id(teams_df):
-    # Create an empty DataFrame to store the expanded data
-    expanded_df = pd.DataFrame()
+## Data Analysis
+Once the data is meticulously prepared, a wide range of analyses can be conducted to glean insights from FPL data. Some of the analyses that can be carried out encompass:
 
-    # Iterate through events from 1 to 38
-    for event_id in range(1, 39):
-        # Create a temporary DataFrame for the current event
-        temp_df = teams_df.copy()
+- Player performance analysis, examining the performance of individual players over various game weeks.
+- Team performance analysis, evaluating the performance of FPL teams and their key players.
+- Fixture analysis, assessing the difficulty of upcoming fixtures for FPL teams.
+- Market value analysis, exploring how player market values change over time.
+- Points distribution analysis, understanding how points are distributed among players.
 
-        # Set the 'event_id' column to the current event ID
-        temp_df['event_id'] = event_id
+These analyses aim to equip FPL enthusiasts with valuable insights that can inform their team selection and overall strategy.
 
-        # Append the temporary DataFrame to the expanded DataFrame
-        expanded_df = pd.concat([expanded_df, temp_df], ignore_index=True)
 
-    return expanded_df
 
-# Call the function to create an expanded DataFrame with 'event_id'
-expanded_teams_df = append_event_id(teams_df)
-```
 
-#### 1.2.2. Fixture DataFrame (Fixture DF)
-Here, we fetch fixture data for each event:
+## Contribution
+Contributions to this open-source project are warmly welcomed. If you have ideas for enhancing the project, conducting additional analyses, or improving data visualizations, you can actively participate by forking this repository, implementing your changes, and submitting a pull request.
 
-- Define the base URL for fetching fixture data.
-- Iterate through events from 1 to 38.
-- Create a temporary DataFrame for the fixture data.
-- Append the temporary DataFrame to the expanded fixture DataFrame.
+## License
+This project is licensed under the [MIT License](LICENSE), which grants you the freedom to use and modify the code for your purposes, with the expectation that you comply with the license terms.
 
-```python
-import requests
-import pandas as pd
-
-def fetch_fixture_data(event_id):
-    # Define the base URL with the event_id
-    base_url = f'https://fantasy.premierleague.com/api/fixtures/?event={event_id}'
-
-    # Replace the placeholder '{}' with the actual event_id
-    formatted_url = base_url.format(event_id)
-
-    # Send an HTTP GET request to the API endpoint
-    response = requests.get(formatted_url)
-
-    # Check if the request was successful (status code 200)
-    if response.status_code == 200:
-        # Parse the JSON response to get fixture data
-        fixture_json = response.json()
-
-        # Create a DataFrame from the fixture data
-        fixture_data = pd.DataFrame(fixture_json)
-
-        return fixture_data
-    else:
-        print(f"Request failed for event {event_id} with status code {response.status_code}")
-        return None  # Return None in case of a failed request
-
-# Create an empty DataFrame to store the expanded fixture data
-expanded_fixture_df = pd.DataFrame()
-
-# Iterate through events from 1 to 38
-for event_id in range(1, 39):
-    # Get fixture data for the current event
-    fixture_data = fetch_fixture_data(event_id)
-
-    # Create a temporary DataFrame for the fixture data
-    temp_df = fixture_data.copy()
-
-    # Set the 'event_id' column to the current event ID
-    temp_df['event_id'] = event_id
-
-    # Append the temporary DataFrame to the expanded fixture DataFrame
-    expanded_fixture_df = pd.concat([expanded_fixture_df, temp_df], ignore_index=True)
-
-# Renaming columns
-expanded_teams_df = expanded_teams_df.rename(columns={'name': 'team_name', 'id': 'team_id', 'short_name': 'team_short_name'})
-expanded_fixture_df = expanded_fixture_df.rename(columns={'id': 'fixture_id'})
-```
-
-#### 1.2.3. Get Fixture ID
-To get the fixture ID for a team in a specific event, you can use the following function:
-
-```python
-def get_fixture_id(event_id, team_id):
-    for idx, row in expanded_fixture_df.iterrows():
-        if event_id == row['event_id']:
-            if team_id == row['team_a'] or team_id == row['team_h']:
-                return row['fixture_id']
-    return None  # Return None if no matching fixture is found
-
-# Assuming you want to calculate and assign fixture IDs for all teams
-
- in event 1
-event_id = 1
-expanded_teams_df['fixture_id'] = expanded_teams_df.apply(lambda row: get_fixture_id(event_id, row['team_id']), axis=1)
-```
-
+Enjoy the journey of data analysis and fantasy football strategy within the world of FPL! If you have any queries or require further assistance, please do not hesitate to contact us.
