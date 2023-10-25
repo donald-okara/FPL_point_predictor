@@ -11,12 +11,8 @@
             "id": "7c3eae070e0be357",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes/Bootstrap-static-Columns-description.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -95,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/Bootstrap-static-Columns-description.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +107,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/Bootstrap-static-Columns-description.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,9 +128,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Notes/Bootstrap-static-Columns-description.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -156,8 +148,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c3eae070e0be357",
+  "active": "70a493fdd4b6c2b5",
   "lastOpenFiles": [
+    "Transfer_Recommendation.ipynb",
     "constant_mapping.csv",
     "Notes/Element-summary-description.md",
     "README.md",
